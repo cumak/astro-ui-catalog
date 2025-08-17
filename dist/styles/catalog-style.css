@@ -1,0 +1,303 @@
+html {
+  color: #000;
+  background: #FFF;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, select, main, address, span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 140%;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+  box-sizing: border-box;
+}
+
+a, span, details, summary {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+strong {
+  font-style: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before, q:after {
+  content: "";
+}
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+sup {
+  vertical-align: text-bottom;
+}
+
+sub {
+  vertical-align: text-top;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input, textarea, select {
+  font-size: 100%;
+}
+
+legend {
+  color: #000;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  backface-visibility: hidden;
+}
+
+.ctGridWrapper {
+  position: relative;
+  display: grid;
+  grid-template: "header header header" auto "sidebar main props" 1fr "footer footer footer" auto/280px 1fr 230px;
+  height: 100vh;
+}
+.ctGridWrapper.is-open {
+  grid-template-columns: 0px 1fr 0px;
+}
+
+.ctHeader {
+  grid-area: header;
+  background-color: #09866f;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.ctHeader-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+}
+
+.ctSidebar {
+  grid-area: sidebar;
+  background-color: #e0e0e0;
+  padding: 40px 20px 30px 40px;
+  overflow: scroll;
+}
+.ctSidebar::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 0;
+}
+.ctSidebar::-webkit-scrollbar-button {
+  display: none;
+}
+.ctSidebar::-webkit-scrollbar-thumb {
+  overflow: hidden;
+  border-radius: 0;
+  background: #051833;
+}
+.ctSidebar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.ctSidebar-componentNavi {
+  margin-bottom: 30px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.ctSidebar-componentNavi li a {
+  text-decoration: none;
+  color: #000;
+  padding: 3px 0;
+  display: inline-block;
+  font-weight: 500;
+}
+.ctSidebar-componentNavi li a:hover {
+  color: #007bff;
+}
+.ctSidebar-componentNavi li a.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.ctSidebarRight {
+  grid-area: props;
+  background-color: #f0f0f0;
+  padding: 20px;
+  overflow: scroll;
+}
+.is-open .ctSidebarRight {
+  width: 0;
+  padding: 0;
+}
+.ctSidebarRight::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 0;
+}
+.ctSidebarRight::-webkit-scrollbar-button {
+  display: none;
+}
+.ctSidebarRight::-webkit-scrollbar-thumb {
+  overflow: hidden;
+  border-radius: 0;
+  background: #051833;
+}
+.ctSidebarRight::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.ctCatalogMain {
+  grid-area: main;
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 20px;
+  overflow: scroll;
+}
+.is-open .ctCatalogMain {
+  padding: 0;
+}
+.ctCatalogMain-arrows {
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+.ctCatalogMain:hover .ctCatalogMain-arrows {
+  opacity: 1;
+  pointer-events: all;
+}
+.ctCatalogMain-arrows-btn {
+  position: absolute;
+  top: 40vh;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+.ctCatalogMain-arrows-btn.is-left {
+  left: 4px;
+}
+.ctCatalogMain-arrows-btn.is-right {
+  right: 4px;
+}
+
+.ctFooter {
+  grid-area: footer;
+  background-color: #d0d0d0;
+  padding: 20px;
+}
+.ctFooter code {
+  font-family: "Menlo, Monaco", "system-ui", monospace, sans-serif;
+}
+
+.ctTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ctDescription {
+  color: #fff;
+}
+
+.ctPropsCode {
+  font-size: 13px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ctPropsCode code {
+  font-family: "Menlo, Monaco", "system-ui", monospace, sans-serif;
+}
+
+.ctSideButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 8px;
+  top: 85px;
+}
+
+#ctSidebarToggle {
+  display: block;
+  margin-inline: auto 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.2s;
+  cursor: pointer;
+  z-index: 10;
+}
+#ctSidebarToggle:hover {
+  background: #626a77;
+}
+.is-open #ctSidebarToggle {
+  transform: rotate(180deg);
+}
+#ctSidebarToggle svg {
+  width: 100%;
+  height: 100%;
+}
+
+.toPropsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: #333;
+  transition: all 0.2s;
+  cursor: pointer;
+  color: #fff;
+}
+.toPropsBtn:hover {
+  background: #626a77;
+}
