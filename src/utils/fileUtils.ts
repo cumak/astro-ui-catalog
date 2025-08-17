@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import { compileAsync } from "sass";
 import { Project, SourceFile } from "ts-morph";
 import { SrcDir } from "./pathUtils.js";
 /**

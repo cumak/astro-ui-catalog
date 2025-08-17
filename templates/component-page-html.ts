@@ -31,19 +31,21 @@ export async function componentPageHtmlTemplate({
   moduleScriptImports, // モジュールスクリプトのインポート文字列
   variablesBlock,
 }: ComponentPageHtmlTemplate): Promise<string> {
-  const importCss = isCatalogDev ? `import '/${catalogCoreFolderName}/src/styles/catalog-style.scss';` : "";
+  const importCss = isCatalogDev
+    ? `import '/node_modules/${catalogCoreFolderName}/src/styles/catalog-style.scss';`
+    : "";
   const uiScript = isCatalogDev
     ? `<script>
-import '/${catalogCoreFolderName}/src/ui/uiEntry.js'
+import '/node_modules/${catalogCoreFolderName}/src/ui/uiEntry.js'
 </script>`
-    : `<script type="module" src="/${catalogCoreFolderName}/dist/ui/uiEntry.js" is:inline></script>
+    : `<script type="module" src="/node_modules/${catalogCoreFolderName}/dist/ui/uiEntry.js" is:inline></script>
 `;
 
   return `---
 import ${name}Component from "${SRC_DIR}/${relativePath}";
 ${importFiles}
 ${importCss}
-${!isCatalogDev && `import '/${catalogCoreFolderName}/dist/styles/catalog-style.css'`}
+${!isCatalogDev && `import '/node_modules/${catalogCoreFolderName}/dist/styles/catalog-style.css'`}
 ${sampleImgImport && sampleImgImport}
 const currentPath = Astro.url.pathname;
 ${variablesBlock}

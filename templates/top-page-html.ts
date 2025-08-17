@@ -8,7 +8,7 @@ const isCatalogDev = process.env.CATALOG_DEV === "true";
 
 export async function topPageHtmlTemplate({ links }: TopPageHtml): Promise<string> {
   return `---
-${!isCatalogDev && `import '/${catalogCoreFolderName}/dist/styles/top-style.css'`}
+${!isCatalogDev && `import '/node_modules/${catalogCoreFolderName}/dist/styles/top-style.css'`}
 ---
 <html lang="ja">
 <head>
@@ -30,7 +30,7 @@ ${
   isCatalogDev
     ? `}
 <style lang="scss">
-@use '/${catalogCoreFolderName}/src/styles/top-style' as *;
+@use '/node_modules/${catalogCoreFolderName}/src/styles/top-style' as *;
 </style>
 `
     : ""

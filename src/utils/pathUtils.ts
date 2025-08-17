@@ -6,7 +6,9 @@ import { OUTPUT_DIR, ASTRO_PROJECT_DIR, SRC_DIR, catalogCoreFolderName } from ".
 
 export const astroProjectDir = path.resolve(__dirname, ASTRO_PROJECT_DIR, "../") + "/";
 export const SrcDir = path.resolve(`${astroProjectDir}/${SRC_DIR}`);
-export const sampleImgPath = path.resolve(`${astroProjectDir}${catalogCoreFolderName}/src/img/dummy-img.png`);
+export const sampleImgPath = path.resolve(
+  `${astroProjectDir}node_modules/${catalogCoreFolderName}/src/img/dummy-img.png`
+);
 
 export const outputComponentDir = path.join(OUTPUT_DIR);
 export const outputDir = `${astroProjectDir}src/pages/_${outputComponentDir}/`;

@@ -1,5 +1,5 @@
 // Astroプロジェクトルート（相対パス）
-const ASTRO_PROJECT_DIR = `../`;
+const ASTRO_PROJECT_DIR = `../../`;
 // コンポーネントのソースコードが格納されているディレクトリ（AstroProjectルートからのパス）
 const SRC_DIR = `src/components`;
 
