@@ -1,0 +1,28 @@
+🆗 Detected generated folder. Removing for regeneration...
+🔁 Moving catalog-ui to _catalog-ui...
+📦 Running generateCatalog.ts...
+✅ BtnRound ページを生成しました。
+✅ BtnShadow ページを生成しました。
+✅ ContactNumber ページを生成しました。
+✅ MenuBtn ページを生成しました。
+✅ Text ページを生成しました。
+✅ CaseSection ページを生成しました。
+✅ MainContents ページを生成しました。
+✅ NewsLayout ページを生成しました。
+✅ ShadowBox ページを生成しました。
+✅ MainContainer ページを生成しました。
+✅ AboutTypingAnimation ページを生成しました。
+✅ BreadCrumb ページを生成しました。
+✅ CaseContentsBox ページを生成しました。
+✅ ContentCardSection ページを生成しました。
+✅ FeatureItem ページを生成しました。
+✅ FooterContact ページを生成しました。
+✅ HeaderNavi ページを生成しました。
+✅ InputSection ページを生成しました。
+✅ NewsItem ページを生成しました。
+✅ Pagination ページを生成しました。
+✅ PrivacyCheckbox ページを生成しました。
+✅ ContentCard ページを生成しました。
+✅ UI カタログページを生成しました。
+🔁 Moving _catalog-ui back to catalog-ui...
+✅ Catalog generation complete!

@@ -1,0 +1,29 @@
+{
+  "name": "astro-ui-catalog",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "dist/src/main.js",
+  "exports": {
+    ".": {
+      "import": "./dist/src/main.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build:css": "sass src:dist --no-source-map",
+    "build:ts": "esbuild src/main.ts src/ui/uiEntry.ts --bundle --platform=node --target=node20 --format=cjs --outdir=dist --external:./config.js --external:jsonc-parser",
+    "build": "bun run build:css && bun run build:ts",
+    "catalog": "dist/main.js",
+    "catalog:dev": "bun run build && CATALOG_DEV=true bun run catalog"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.5",
+    "jsonc-parser": "^3.3.1",
+    "sass": "^1.89.2"
+  }
+}

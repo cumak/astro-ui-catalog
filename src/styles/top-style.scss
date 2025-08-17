@@ -1,0 +1,32 @@
+@use "_reset.scss" as *;
+
+.ctTopList{
+  padding: 80px;
+  &-title{
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  &-links{
+    width: fit-content;
+    margin-inline: auto;
+    padding: 20px 40px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    li{
+      font-family: 'Menlo, Monaco','system-ui',monospace , sans-serif;
+      a{
+        display: block;
+        padding: 5px;
+        white-space: nowrap;
+        color: #000;
+        &:hover{
+          background: #f0f0f0;
+          text-decoration: none;
+          color: #007bff;
+        }
+      }
+    }
+  }
+}
